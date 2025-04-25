@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="login-box">
+      <img src="assets/logo.jpg" alt="Logo" class="logo" />
+      <h1>LOGIN WASMART</h1>
+  
+      <!-- Botón de MetaMask -->
+      <button (click)="connectWallet()" class="login-button fake-button">
+        🦊 META MASK
+      </button>
+  
+      <!-- Botones ficticios -->
+      <button class="login-button fake-button google-button">
+        🔑 GOOGLE
+      </button>
+  
+      <button class="login-button fake-button ethereum-button">
+        💎 ETHEREUM
+      </button>
+  
+      <button class="login-button fake-button discord-button">
+        🎮 DISCORD
+      </button>
+  
+      <!-- Mostrar dirección y saldo -->
+      <div *ngIf="address" class="success-message">
+        Conectado: {{ address }}
+      </div>
+      <div *ngIf="balance" class="success-message">
+        Saldo ETH: {{ balance }} ETH
+      </div>
+  
+      <!-- Mostrar error si no se puede conectar -->
+      <div *ngIf="error" class="error-message">
+        Error: {{ error }}
+      </div>
+    </div>
+  </div>
+  

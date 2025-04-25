@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/wasmart.png'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    color: white;
+    height: 100vh; /* Hace que la altura sea del 100% de la ventana */
+  }
+  
+  .login-box {
+    background-color: rgba(22, 27, 34, 0.8); /* Fondo con opacidad para hacer contraste con la imagen */
+    padding: 40px 50px; /* Aumentado el padding para dar más espacio dentro del cuadro */
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px; /* Aumentado el ancho para hacer el cuadro más grande */
+  }
+  
+  .logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 24px; /* Aumentado el tamaño del texto */
+    margin-bottom: 20px;
+  }
+  
+  .login-button {
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 10px 0; /* Añadir espacio entre botones */
+  }
+  
+  .login-button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Botones ficticios - Personalizados */
+  .fake-button {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: not-allowed; /* Para indicar que no es interactivo */
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .fake-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Botón Google */
+  .google-button {
+    background-color: #db4437; /* Color de Google */
+    color: white;
+  }
+  
+  .google-button:hover {
+    background-color: #c1351d; /* Efecto hover para Google */
+  }
+  
+  /* Botón Ethereum */
+  .ethereum-button {
+    background-color: #3c3c3d; /* Color de Ethereum */
+    color: white;
+  }
+  
+  .ethereum-button:hover {
+    background-color: #2b2b2b; /* Efecto hover para Ethereum */
+  }
+  
+  /* Botón Discord */
+  .discord-button {
+    background-color: #7289da; /* Color de Discord */
+    color: white;
+  }
+  
+  .discord-button:hover {
+    background-color: #5b6eaa; /* Efecto hover para Discord */
+  }
+  
+  .success-message {
+    color: #00ff99;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .error-message {
+    color: #ff5050;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
