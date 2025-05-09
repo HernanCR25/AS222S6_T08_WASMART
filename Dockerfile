@@ -16,7 +16,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 # Copiar archivos construidos al directorio público de Nginx
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist/dapp /usr/share/nginx/html
 
 # Copiar archivo de configuración Nginx personalizado si es necesario
 # COPY nginx.conf /etc/nginx/nginx.conf
