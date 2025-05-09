@@ -18,7 +18,10 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copia la app Angular construida
 COPY --from=builder /app/dist/dapp /usr/share/nginx/html
 
-# Exponer el puerto 80 (no 4200, Nginx sirve en 80)
+# Da permisos adecuados a los archivos para que Nginx pueda acceder a ellos
+RUN chmod -R 755 /usr/share/nginx/html
+
+# Exponer el puerto 80 (Nginx sirve en 80, no 4200)
 EXPOSE 4200
 
 CMD ["nginx", "-g", "daemon off;"]
