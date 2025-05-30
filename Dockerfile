@@ -14,18 +14,38 @@ RUN npm install
 COPY . .
 
 # Construir la app
-RUN npm run build --prod
+RUN npm run build --configuration=production
 
 # Etapa 2: Servir la app con Nginx
 FROM nginx:stable-alpine
 
+# Remover archivos por defecto de nginx
+RUN rm -rf /usr/share/nginx/html/*
+
 # Copiar archivos construidos desde la etapa de construcción
-COPY --from=builder /app/dist/dapp /usr/share/nginx/html
+# LA RUTA CORRECTA: /app/dist/dapp/browser/ (donde están los archivos del cliente)
+COPY --from=builder /app/dist/dapp/browser/ /usr/share/nginx/html/
 
-# Opcional: Si tienes un archivo de configuración Nginx personalizado, lo puedes copiar aquí
-# COPY nginx.conf /etc/nginx/nginx.conf
+# Configuración de nginx para Angular SPA (manejo de rutas)
+RUN echo 'server { \
+    listen 80; \
+    server_name localhost; \
+    root /usr/share/nginx/html; \
+    index index.html; \
+    \
+    # Configuración para Single Page Application \
+    location / { \
+        try_files $uri $uri/ /index.html; \
+    } \
+    \
+    # Cache para archivos estáticos \
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg)$ { \
+        expires 1y; \
+        add_header Cache-Control "public, immutable"; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
 
-# Exponer el puerto 80 (el predeterminado para Nginx)
+# Exponer el puerto 80
 EXPOSE 80
 
 # Comando para ejecutar Nginx

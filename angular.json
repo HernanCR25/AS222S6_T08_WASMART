@@ -27,16 +27,15 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
-              "aot": true,
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "namedChunks": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -48,29 +47,25 @@
                   "maximumWarning": "8kb",
                   "maximumError": "12kb"
                 }
-              ]
+              ],
+              "outputHashing": "all"
             },
             "development": {
-              "aot": false,
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "dapp:build"
-          },
           "configurations": {
             "production": {
-              "browserTarget": "dapp:build:production"
+              "buildTarget": "dapp:build:production"
             },
             "development": {
-              "browserTarget": "dapp:build:development"
+              "buildTarget": "dapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "fb225cbb-ada6-4f00-80f3-cac4aa60f519"
   }
 }
