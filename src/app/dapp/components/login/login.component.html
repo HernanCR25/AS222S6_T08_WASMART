@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WASMART - Professional Wallet</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="login.component.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="header-content">
+        <div class="brand">
+          <div class="brand-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <span class="brand-name">WASMART</span>
+        </div>
+        <nav class="nav">
+          <a href="#features" class="nav-link">Características</a>
+          <a href="#team" class="nav-link">Equipo</a>
+          <a href="#contact" class="nav-link">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>Seguridad Blockchain</span>
+          </div>
+          <h1 class="hero-title">
+            Tu Billetera Descentralizada
+            <span class="gradient-text">del Futuro</span>
+          </h1>
+          <p class="hero-description">
+            Experimenta la próxima generación de finanzas descentralizadas con WASMART.
+            Seguridad avanzada, interfaz intuitiva y control total de tus activos digitales.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Seguridad Máxima</h3>
+                <p>Encriptación de nivel militar</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Transacciones Rápidas</h3>
+                <p>Procesamiento instantáneo</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="feature-text">
+                <h3>Acceso Global</h3>
+                <p>Disponible 24/7 mundialmente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Login Section -->
+      <section class="login-section">
+        <div class="login-container">
+          <div class="login-header">
+            <div class="login-logo">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <h2>Conecta tu Billetera</h2>
+            <p>Elige tu método de autenticación preferido</p>
+          </div>
+
+          <div class="login-options">
+            <button class="login-btn metamask-btn" (click)="connectWithMetaMask()">
+              <div class="btn-content">
+                <div class="btn-icon metamask-icon">
+                  <i class="fab fa-ethereum"></i>
+                </div>
+                <div class="btn-text">
+                  <span class="btn-title">MetaMask</span>
+                  <span class="btn-subtitle">Conectar con MetaMask</span>
+                </div>
+              </div>
+              <i class="fas fa-arrow-right btn-arrow"></i>
+            </button>
+
+
+            <button class="login-btn discord-btn" (click)="connectWithMetaMask()">
+              <div class="btn-content">
+                <div class="btn-icon discord-icon">
+                  <i class="fab fa-discord"></i>
+                </div>
+                <div class="btn-text">
+                  <span class="btn-title">Discord</span>
+                  <span class="btn-subtitle">Autenticación con Discord</span>
+                </div>
+              </div>
+              <i class="fas fa-arrow-right btn-arrow"></i>
+            </button>
+
+            <button class="login-btn google-btn" (click)="connectWithMetaMask()">
+              <div class="btn-content">
+                <div class="btn-icon google-icon">
+                  <i class="fab fa-google"></i>
+                </div>
+                <div class="btn-text">
+                  <span class="btn-title">Google</span>
+                  <span class="btn-subtitle">Iniciar sesión con Google</span>
+                </div>
+              </div>
+              <i class="fas fa-arrow-right btn-arrow"></i>
+            </button>
+
+            <button class="login-btn github-btn" (click)="connectWithMetaMask()">
+              <div class="btn-content">
+                <div class="btn-icon github-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="btn-text">
+                  <span class="btn-title">GitHub</span>
+                  <span class="btn-subtitle">Conectar con GitHub</span>
+                </div>
+              </div>
+              <i class="fas fa-arrow-right btn-arrow"></i>
+            </button>
+          </div>
+
+          <div class="security-notice">
+            <div class="security-icon">
+              <i class="fas fa-shield-check"></i>
+            </div>
+            <div class="security-text">
+              <p>Tus datos están protegidos con encriptación de extremo a extremo</p>
+            </div>
+          </div>
+
+          <div class="login-footer">
+            <p>Al continuar, aceptas nuestros
+              <a href="#" class="link">Términos de Servicio</a> y
+              <a href="#" class="link">Política de Privacidad</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+<section class="objetivos-beneficios">
+  <h2 class="section-title">Objetivos</h2>
+  <div class="objetivos-grid">
+    <div class="objetivo-item">
+      <h3>Objetivo 1</h3>
+      <p>Descripción del objetivo 1.</p>
+    </div>
+    <div class="objetivo-item">
+      <h3>Objetivo 2</h3>
+      <p>Descripción del objetivo 2.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">Beneficios</h2>
+  <div class="beneficios-grid">
+    <div class="beneficio-item">
+      <h3>Beneficio 1</h3>
+      <p>Descripción del beneficio 1.</p>
+    </div>
+    <div class="beneficio-item">
+      <h3>Beneficio 2</h3>
+      <p>Descripción del beneficio 2.</p>
+    </div>
+  </div>
+</section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>Nuestro Equipo</h2>
+          <p>Expertos dedicados a revolucionar las finanzas descentralizadas</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="../../../../assets/images/hernan.jpg" alt="Foto de Hernán Chumpitaz" class="avatar-image">
+
+            <div class="member-info">
+              <h3>Hernán Chumpitaz</h3>
+              <p class="member-role">Blockchain Developer</p>
+              <div class="member-social">
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-avatar">
+              <img src="../../../../assets/images/danna.png" alt="Foto de Danna" class="avatar-image">
+            </div>
+            <div class="member-info">
+              <h3>Danna López</h3>
+              <p class="member-role">Full Stack Developer</p>
+              <div class="member-social">
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <span class="brand-name">WASMART</span>
+          </div>
+          <p>La próxima generación de billeteras descentralizadas</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Producto</h4>
+            <a href="#">Características</a>
+            <a href="#">Seguridad</a>
+            <a href="#">API</a>
+          </div>
+          <div class="link-group">
+            <h4>Soporte</h4>
+            <a href="#">Documentación</a>
+            <a href="#">Contacto</a>
+            <a href="#">FAQ</a>
+          </div>
+          <div class="link-group">
+            <h4>Legal</h4>
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 WASMART. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
