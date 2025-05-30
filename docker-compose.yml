@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  wasmart:
+    image: hernancr/wasmart
+    ports:
+      - "4200:80"
